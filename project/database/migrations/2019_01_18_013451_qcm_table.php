@@ -15,11 +15,11 @@ class QcmTable extends Migration
     {
         Schema::create('qcm', function (Blueprint $table) {
             $table->increments('id');
-            $table->increments('matiere');
-	        $table->increments('description');
-	        $table->increments('session');
-	        $table->increments('annee');
-	        $table->increments('question');
+            $table->string('matiere');
+	        $table->string('description');
+	        $table->string('session');
+	        $table->string('annee');
+	        $table->string('question');
             $table->timestamps();
         });
     }

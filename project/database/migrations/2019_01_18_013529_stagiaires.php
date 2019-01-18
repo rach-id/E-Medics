@@ -15,9 +15,12 @@ class Stagiaires extends Migration
     {
         Schema::create('stagiaires', function (Blueprint $table) {
             $table->increments('id');
-            $table->increments('Nom');
-            $table->increments('Prenom');
-            $table->increments('Annee');
+            $table->string('Nom');
+            $table->string('Prenom');
+            $table->string('Annee');
+            $table->string('email')->unique();
+            $table->string('password');
+            $table->rememberToken();
             $table->timestamps();
         });
     }

@@ -15,9 +15,12 @@ class Formatteurs extends Migration
     {
         Schema::create('formatteurs', function (Blueprint $table) {
             $table->increments('id');
-            $table->increments('Nom');
-            $table->increments('Prenom');
-            $table->increments('matiere');
+            $table->string('Nom');
+            $table->string('Prenom');
+            $table->string('matiere');
+            $table->string('email')->unique();
+            $table->string('password');
+            $table->rememberToken();
             $table->timestamps();
         });
     }

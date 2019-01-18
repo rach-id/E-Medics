@@ -15,8 +15,11 @@ class Admins extends Migration
     {
         Schema::create('admins', function (Blueprint $table) {
             $table->increments('id');
-            $table->increments('Nom');
-            $table->increments('Prenom');
+            $table->string('Nom');
+            $table->string('Prenom');
+            $table->string('email')->unique();
+            $table->string('password');
+            $table->rememberToken();
             $table->timestamps();
         });
     }

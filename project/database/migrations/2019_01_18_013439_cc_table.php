@@ -15,11 +15,11 @@ class CcTable extends Migration
     {
         Schema::create('cc', function (Blueprint $table) {
             $table->increments('id');
-            $table->increments('titre');
-	        $table->increments('description');
-	        $table->increments('session');
-	        $table->increments('annee');
-	        $table->increments('lien');
+            $table->string('titre');
+	        $table->string('description');
+	        $table->string('session');
+	        $table->string('annee');
+	        $table->string('lien');
             $table->timestamps();
         });
     }
