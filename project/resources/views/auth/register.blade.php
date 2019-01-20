@@ -45,9 +45,12 @@
                             <label for="formateur" class="col-md-4 control-label">Formateur/Stagiaire</label>
 
                             <div class="col-md-6">
-                                <!-- <input id="formateur" type="checkbox"  name="formateur" value="1" autofocus> -->
+                                <!-- <input id="formateur" type="checkbox"  name="formateur" value="1" autofocus> 
                                 
-                                <input type="text" name="formateur" value="{{ old('formateur') }}"/> 
+                                 <input type="text" name="formateur" value="{{ old('formateur') }}"/> -->
+                                 
+                                <input type="radio" name="formateur" value="Formateur" checked> Formateur
+                				<input type="radio" name="formateur" value="Stagiaire"> Stagiaire
 
                                 @if ($errors->has('formateur'))
                                     <span class="help-block">
@@ -59,6 +62,30 @@
                         
                         
                         
+                    <div class="form-group{{ $errors->has('annee') ? ' has-error' : '' }}">
+                            <label for="annee" class="col-md-4 control-label">Annee</label>
+
+                            <div class="col-md-6">
+                                <!-- <input id="formateur" type="checkbox"  name="formateur" value="1" autofocus> 
+                                
+                                 <input type="text" name="formateur" value="{{ old('formateur') }}"/> -->
+                                 
+						    	<input type="radio" name="annee" value="1" checked> 1
+						    	<input type="radio" name="annee" value="2"> 2
+						    	<input type="radio" name="annee" value="3"> 3
+						    	<input type="radio" name="annee" value="4"> 4
+						    	<input type="radio" name="annee" value="5"> 5
+						    	<input type="radio" name="annee" value="6"> 6
+						    	<input type="radio" name="annee" value="7"> 7 <br>
+                                @if ($errors->has('formateur'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('formateur') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+                        
+                
                         
                         
                         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
